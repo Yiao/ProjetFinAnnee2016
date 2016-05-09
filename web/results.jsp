@@ -16,16 +16,48 @@
                             <img src="assets/images/offer3.jpg" alt="cruise">
                         </div>
                         <div class="col-md-6 col-sm-6 hotel-info">
+
                             <div>
+                                <%
+                                    //search results are here
+                                    String myDestination ="";
+                                    String myDeparture ="";
+                                    long myIdTrip = 0 ;
+                                    long myTrainNumber = 0 ;
+                                    try
+                                    {
+                                        @SuppressWarnings("unchecked")
+                                        List<Voyage> myTripList = (List<Voyage>)request.getAttribute("tripSearch");
+                                        //no results
+                                        if (myTripList.size()==0 || myTripList.isEmpty())
+                                        {
+                                            out.print(" <h1> Sorry :( ! no Results were Found For you're search try to enter correct town names : Exemple orleans </h1>");
+                                        }
+                                        else
+                                        {
+                                            for(final Voyage myTripResult :myTripList )
+                                            {
+                                                myDeparture=  myTripResult.getDepartureVoyage().getStationName();
+                                                myDestination= myTripResult.getArrivalVoyage().getStationName();
+                                                myIdTrip= myTripResult.getIdVoyage();
+                                                myTrainNumber=  myTripResult.getTrain().getIdTrain();
+                                            }
+                                        }
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        out.print(ex.getMessage());
+                                    }
+                                %>
                                 <div class="hotel-header">
-                                    <h5>Hotel Residency <span><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star-o colored"></i></span></h5>
-                                    <p><i class="fa fa-map-marker"></i>Mall Road, Shimla <i class="fa fa-phone"></i>(+91) 123456789</p>
+                                    <h5>Search Results <span><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star colored"></i><i class="fa fa-star-o colored"></i></span></h5>
+
                                 </div>
                                 <div class="hotel-facility">
                                     <p><i class="fa fa-wifi" title="Free Wifi"></i><i class="fa fa-bed" title="Luxury Bedroom"></i><i class="fa fa-taxi" title="Transportation"></i><i class="fa fa-beer" title="Bar"></i><i class="fa fa-cutlery" title="Restaurant"></i></p>
                                 </div>
                                 <div class="hotel-desc">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    <p>Departure : <%=myDeparture%> <br/>        Destination : <%=myDestination%>    <br/>          Train number :<%=myTrainNumber%> </p>
                                 </div>
                             </div>
                         </div>
@@ -35,17 +67,14 @@
                                 <div class="tripadvisor-rating">
                                     <img src="assets/images/tripadvisor.png" alt="cruise"><span>4.5/5.0</span>
                                 </div>
-                                <div class="user-rating">
-                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                                    <span>128 Guest Reviews.</span>
-                                </div>
+
                             </div>
                             <div class="room-book-box">
                                 <div class="price">
-                                    <h5>$50 Avg/Night</h5>
+                                    <h5>put price here ?</h5>
                                 </div>
                                 <div class="book">
-                                    <a href="#">BOOK</a>
+                                    <a href=\"/AddToPanel?thisTrip="<%=myIdTrip%>>BOOK</a>
                                 </div>
                             </div>
                         </div>
@@ -79,12 +108,6 @@
                                 <%--out.print("<div class=\"col-sm-12\">");--%>
 
 
-                                <%--out.print( " <div class=\"box-block\">"+" <div class=\"media\">"+"<a class=\"media-object pull-left\" href=\"#\"><img class=\"responsive-image\" src=\"/images/content/featured-tour-1.png\" alt=\"\"/></a>");--%>
-                                <%--out.print(" <div class=\"media-action pull-right\">" + "<span class=\"price\"><small>Per Seat </small> $" + myTripResult.getDepartureDate() + "</span><br/>" + "<a href=\"/AddToPanel?thisTrip=" + myTripResult.getIdVoyage()+ "\" class=\"button mini\"> Book</a>");--%>
-                                <%--out.print("</div>" + "<p> Results to Trips Going From : " + "<strong>"+myTripResult.getDepartureVoyage().getStationName()+"</strong>" + "</p>" + "<div class=\"media-body\" >");--%>
-                                <%--out.print("<div class=\"media-body\" >");--%>
-                                <%--out.print(" <h3  class=\"media-heading\"> Destination :" + myTripResult.getArrivalVoyage().getStationName()+ "</h3>");--%>
-                                <%--out.print(" Transport  :" + myTripResult.getTrain() + "</p>" + " </div>" + " </div>" + " </div>" + " </div>"+"</div>");--%>
 
                             <%--}--%>
 
