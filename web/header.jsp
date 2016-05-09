@@ -112,7 +112,7 @@
                                 if (username!=""&&username!=null)
                                 {
                                     out.println(
-                                            "<a href=\"\" class=\"transition-effect\"> Hi " + username + "</a>");
+                                            "<a href=\"/userProfileServlet\" class=\"transition-effect\"> Hi " + username + "</a>");
                                 }
                                 else
                                 {
