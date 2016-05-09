@@ -2,12 +2,14 @@ package com.supinfo.transport.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.security.PrivateKey;
+import java.util.List;
 
 /**
  * Created by sya on 3/6/2016.
  */
+// khalil modification
 @Entity
-@Table(name = "TAB_USERS")
 public class Users implements Serializable {
 
 
@@ -16,6 +18,16 @@ public class Users implements Serializable {
     private Long id = null;
     private String username = null;
     private String password = null;
+    private String Email;
+    private int age ;
+    private String firstName;
+    private String lastName;
+
+    //1 client * reservation
+    @OneToMany(mappedBy = "users")
+    private List<Ticket> userTicket;
+    
+
 
     public Users(){
     }

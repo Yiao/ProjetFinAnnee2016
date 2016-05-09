@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class UsersDAO implements GenericDAO {
     @Override
-    public Users rearch(String usernameSelected) {
+    public Users search(String usernameSelected) {
         EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
         Query query = em.createQuery("SELECT user From Users AS user where user.username= :userSelected");
         query.setParameter("userSelected",usernameSelected);
@@ -24,12 +24,12 @@ public class UsersDAO implements GenericDAO {
     }
 
     @Override
-    public void update() {
+    public void update(long id ) {
 
     }
 
     @Override
-    public void delect(Long idin) {
+    public void delete(Long idin) {
 
     }
 }

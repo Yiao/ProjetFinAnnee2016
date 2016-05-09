@@ -4,13 +4,14 @@ import com.supinfo.transport.entity.Users;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import java.util.List;
 
 /**
  * Created by sya on 3/6/2016.
  */
 public interface GenericDAO {
-    Users rearch(String usernameSelected);
+    Users search(String usernameSelected);
     default void  create(Object o)
     {
         EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
@@ -28,6 +29,22 @@ public interface GenericDAO {
         }
     }
     List read();
-    void update();
-    void delect(Long idin);
+    void update(long id);
+    void delete(Long id);
+
+    default void saveUpdateChange(EntityManager em , Query query, EntityTransaction entityTransaction)
+    {
+        try
+        {
+            //   em.persist(thisUser);
+            entityTransaction.begin();
+            query.executeUpdate();
+            entityTransaction.commit();
+        }
+        finally
+        {
+            if (entityTransaction.isActive()) entityTransaction.rollback();
+            em.close();
+        }
+    }
 }

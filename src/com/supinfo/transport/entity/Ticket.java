@@ -6,19 +6,54 @@ import java.io.Serializable;
 /**
  * Created by sya on 3/6/2016.
  */
+// khalil modification
+//ticket = reservation ?
 @Entity
-@Table(name = "TAB_TICKETS")
+
 public class Ticket implements Serializable {
+
+
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     private Long id = null;
+    private  String ticketClass;
+    private float price;
+    boolean status ;
+//1 user * tckets
+    @ManyToOne
+    private Users users;
+    //1 Trip * tickets
+    @ManyToOne
+    private Voyage voyage;
 
 
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+
+    public float getPrice() {
+        return price;
     }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public Users getUsers() {
+        return users;
+    }
+
+    public void setUsers(Users users) {
+        this.users = users;
+    }
+
+    public Voyage getVoyage() {
+        return voyage;
+    }
+
+    public void setVoyage(Voyage voyage) {
+        this.voyage = voyage;
+    }
+
 }

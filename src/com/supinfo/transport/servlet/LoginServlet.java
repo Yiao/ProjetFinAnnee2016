@@ -21,9 +21,9 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        UsersDAO rearchUser = new UsersDAO();
+        UsersDAO searchUser = new UsersDAO();
         try {
-            Users userLogin = rearchUser.rearch(username);
+            Users userLogin = searchUser.search(username);
             if (userLogin.getUsername().equals(username)  && userLogin.getPassword().equals(password))
             {
                 //on recupere ce que on a entre dans username et password
