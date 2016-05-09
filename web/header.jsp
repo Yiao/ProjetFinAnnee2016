@@ -78,24 +78,6 @@
     </div>
     <!-- END: PRELOADER -->
 
-    <!-- BEGIN: COLOR SWITCHER -->
-    <div class="cswitcher">
-        <div id="color-switcher">
-            <h6>CHOOSE COLOR</h6>
-            <ul>
-                <li class="green" data-path="assets/css/color/green.css"></li>
-                <li class="light-green" data-path="assets/css/color/light-green.css"></li>
-                <li class="red" data-path="assets/css/dummy.html"></li>
-                <li class="blue" data-path="assets/css/color/blue.css"></li>
-                <li class="brown" data-path="assets/css/color/brown.css"></li>
-                <li class="purple" data-path="assets/css/color/purple.css"></li>
-                <li class="orange" data-path="assets/css/color/orange.css"></li>
-                <li class="yellow" data-path="assets/css/color/yellow.css"></li>
-            </ul>
-        </div>
-    </div>
-    <span id="stoggle"><i class="fa fa-cog"></i></span>
-    <!-- END: COLOR SWITCHER -->
 
     <!-- BEGIN: SITE-WRAPPER -->
     <div class="row header-top">
