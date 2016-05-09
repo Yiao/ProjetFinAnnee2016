@@ -23,6 +23,7 @@
     <title>SNCF-Test</title>
 
     <!-- STYLES -->
+
     <link href="assets/css/animate.min.css" rel="stylesheet">
     <link href="assets/css/bootstrap-select.min.css" rel="stylesheet">
     <link href="assets/css/owl.carousel.css" rel="stylesheet">
