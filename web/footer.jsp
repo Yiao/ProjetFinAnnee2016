@@ -63,16 +63,16 @@
     <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>--%>
     <%--<script src="/js/bootstrap.js"></script>--%>
 
-    <script src="assets/js/respond.js"></script>
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/plugins/owl.carousel.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/bootstrap-select.min.js"></script>
-    <script src="assets/plugins/wow.min.js"></script>
-    <script src="assets/plugins/jquery.magnific-popup.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/supersized.3.1.3.min.js"></script>
-    <script src="assets/js/js.js"></script>
+    <script src="/assets/js/respond.js"></script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/plugins/owl.carousel.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-ui.min.js"></script>
+    <script src="/assets/js/bootstrap-select.min.js"></script>
+    <script src="/assets/plugins/wow.min.js"></script>
+    <script src="/assets/plugins/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="/assets/plugins/supersized.3.1.3.min.js"></script>
+    <script src="/assets/js/js.js"></script>
     <script type="text/javascript">
     /* SLIDER SETTINGS */
     jQuery(function($){

@@ -24,18 +24,18 @@
 
     <!-- STYLES -->
 
-    <link href="assets/css/animate.min.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-select.min.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl-carousel-theme.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="assets/css/flexslider.css" rel="stylesheet" media="screen">
-    <link href="assets/css/style.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="/assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="/assets/css/owl-carousel-theme.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/flexslider.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/style.css" rel="stylesheet" media="screen">
     <!-- LIGHT -->
-    <link rel="stylesheet" type="text/css" href="assets/css/dummy.html" id="select-style">
-    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/css/dummy.html" id="select-style">
+    <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="assets/css/light.css" rel="stylesheet" media="screen">
+    <link href="/assets/css/light.css" rel="stylesheet" media="screen">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600' rel='stylesheet' type='text/css'>
 
@@ -112,7 +112,7 @@
                                 if (username!=""&&username!=null)
                                 {
                                     out.println(
-                                            "<a href=\"/userProfileServlet\" class=\"transition-effect\"> Hi " + username + "</a>");
+                                            "<a href=\"/auth/userProfileServlet\" class=\"transition-effect\"> Hi " + username + "</a>");
                                 }
                                 else
                                 {

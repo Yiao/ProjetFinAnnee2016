@@ -18,7 +18,7 @@ import java.util.List;
  */
 // a remetre le filter
 
-@WebServlet(name = "UserTicketsServlet",urlPatterns = "/myTravels")
+@WebServlet(name = "UserTicketsServlet",urlPatterns = "/auth/myTravels")
 public class UserTicketsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

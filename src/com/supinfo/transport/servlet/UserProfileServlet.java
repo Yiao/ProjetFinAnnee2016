@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by sya on 5/9/2016.
  */
-@WebServlet(name = "UserProfileServlet",urlPatterns="/userProfileServlet")
+@WebServlet(name = "UserProfileServlet",urlPatterns="/auth/userProfileServlet")
 public class UserProfileServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

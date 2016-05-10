@@ -34,7 +34,6 @@
 
     <%--</div>--%>
 <%--</form>--%>
-
 <!-- START: PAGE TITLE -->
 <div class="row page-title">
     <div class="container clear-padding text-center flight-title">

@@ -37,7 +37,7 @@ public class AuthenticateFilter implements Filter {
                 if (resp instanceof HttpServletResponse)
                 {
                     HttpServletResponse servletResponse=(HttpServletResponse) resp;
-                    servletResponse.sendRedirect("/");
+                    servletResponse.sendRedirect("/login.jsp");
                 }
             }
         }
