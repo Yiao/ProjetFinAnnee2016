@@ -22,6 +22,7 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         UsersDAO searchUser = new UsersDAO();
+
         try {
             Users userLogin = searchUser.search(username);
             if (userLogin.getUsername().equals(username)  && userLogin.getPassword().equals(password))

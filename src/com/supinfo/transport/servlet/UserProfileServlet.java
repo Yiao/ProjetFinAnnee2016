@@ -17,6 +17,6 @@ public class UserProfileServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/userProfile.jsp").forward(request, response);
+        response.sendRedirect("userProfile.jsp");
     }
 }

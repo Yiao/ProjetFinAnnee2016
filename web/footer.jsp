@@ -73,8 +73,8 @@
     <script src="/assets/plugins/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="/assets/plugins/supersized.3.1.3.min.js"></script>
     <script src="/assets/js/js.js"></script>
-    <script type="text/javascript">
-    /* SLIDER SETTINGS */
+<script type="text/javascript">
+
     jQuery(function($){
         "use strict";
         $.supersized({
@@ -82,11 +82,11 @@
             //Functionality
             slideshow               :   1,		//Slideshow on/off
             autoplay				:	1,		//Slideshow starts playing automatically
-            start_slide             :   1,		//Start slide (0 is random)
+            start_slide             :   0,		//Start slide (0 is random)
             random					: 	0,		//Randomize slide order (Ignores start slide)
             slide_interval          :   10000,	//Length between transitions
             transition              :   1, 		//0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-            transition_speed		:	500,	//Speed of transition
+            transition_speed		:	600,	//Speed of transition
             new_window				:	1,		//Image links open in new window/tab
             pause_hover             :   0,		//Pause slideshow on hover
             keyboard_nav            :   0,		//Keyboard navigation on/off
@@ -107,16 +107,17 @@
             slide_counter           :   1,		//Display slide numbers
             slide_captions          :   1,		//Slide caption (Pull from "title" in slides array)
             slides 					:  	[		//Slideshow Images
-                {image : 'assets/images/switzerland.jpg', title : 'Slide 1'},
-                {image : 'assets/images/slide18.jpg', title : 'Slide 2'},
-                {image : 'assets/images/beach.jpg', title : 'Slide 3'},
+                {image : 'assets/images/hotel-slide.jpg', title : 'Slide 1'},
+                {image : 'assets/images/holiday-slide5.jpg', title : 'Slide 2'},
+                {image : 'assets/images/holiday-slide3.jpg', title : 'Slide 3'}
             ]
 
         });
     });
 
+
 </script>
-    <script>
+<script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

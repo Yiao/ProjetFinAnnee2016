@@ -31,6 +31,7 @@ public class AddToTicketServlet extends HttpServlet {
         TicketDAO myReservationDAO = new TicketDAO();
         Users thisUser = new Users();
         Voyage thisTrip = new Voyage();
+
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         //associer une trip a un utilisateur
         //recuperer le voyage selectionné
@@ -39,11 +40,11 @@ public class AddToTicketServlet extends HttpServlet {
         //recuperer l'campusbooster de user connecté
         HttpSession sessionIn =  httpRequest.getSession();
         String myUserAccount = (String)sessionIn.getAttribute("username");
+
         thisUser= myUserDAO.search(myUserAccount);
         //update la table Trip
         myReservationDAO.addReservation(thisUser,thisTrip);
         // MyTripDAO.updateTrip(thisUser,thisTrip);
         response.sendRedirect("/myTravels");
-
     }
 }

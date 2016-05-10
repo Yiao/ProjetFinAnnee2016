@@ -25,6 +25,7 @@ public class UserTicketsServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //user
         TicketDAO reservationDAO =new TicketDAO();
         UsersDAO userDAO =new UsersDAO();
         Users myUser =new Users();
@@ -35,7 +36,6 @@ public class UserTicketsServlet extends HttpServlet {
         myUser = userDAO.search(account);
         List myReservations =reservationDAO.getMyReservations(myUser.getId());
         request.setAttribute("myReservationPanel",myReservations);
-        this.getServletContext().getRequestDispatcher("/myTravels.jsp").forward(request, response);
-
+        this.getServletContext().getRequestDispatcher("/auth/userProfileServlet").forward(request, response);
     }
 }
