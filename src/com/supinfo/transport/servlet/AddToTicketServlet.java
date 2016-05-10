@@ -18,7 +18,7 @@ import java.io.IOException;
  * Created by Khalil on 07/05/2016.
  */
 //filter a remetre
-@WebServlet(name = "AddToTicketServlet" ,urlPatterns="/auth//AddToPanel")
+@WebServlet(name = "AddToTicketServlet" ,urlPatterns="/auth/AddToPanel")
 public class AddToTicketServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

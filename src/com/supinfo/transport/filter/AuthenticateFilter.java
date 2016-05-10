@@ -18,27 +18,28 @@ public class AuthenticateFilter implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         chain.doFilter(req, resp);
+
         String username = null;
-        String password = null;
-        if (req instanceof HttpServletRequest)
-        {
-            HttpServletRequest httpRequest = (HttpServletRequest) req;
-            HttpSession sessionIn =  httpRequest.getSession();
+        if (req instanceof HttpServletRequest) {
+            HttpServletRequest request = (HttpServletRequest) req;
 
-            username = (String) sessionIn.getAttribute("username");
-            password = (String) sessionIn.getAttribute("password");
 
-            if (username!=null&& !Objects.equals(username, "")||password!=null&& !Objects.equals(password, ""))
+            HttpSession session = request.getSession();
+            username = (String) session.getAttribute("username");
+
+            if (username == null || Objects.equals(username, ""))
             {
-                chain.doFilter(httpRequest,resp);
+                if (resp instanceof HttpServletResponse)
+
+                {
+                    HttpServletResponse response=(HttpServletResponse) resp;
+                    response.sendRedirect("/login.jsp");
+                }
+
             }
             else
             {
-                if (resp instanceof HttpServletResponse)
-                {
-                    HttpServletResponse servletResponse=(HttpServletResponse) resp;
-                    servletResponse.sendRedirect("/login.jsp");
-                }
+                chain.doFilter(request, resp);
             }
         }
     }

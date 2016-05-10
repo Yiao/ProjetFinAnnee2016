@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by Khalil on 05/05/2016.
  */
-@WebServlet(name = "SearchServlet" ,urlPatterns = "/auth/search")
+@WebServlet(name = "SearchServlet" ,urlPatterns = "/search")
 public class SearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         VoyageDAO myVoyageDAO = new VoyageDAO();
@@ -50,14 +50,6 @@ public class SearchServlet extends HttpServlet {
         System.out.print("working");
         request.setAttribute("tripSearch", mySearchResults);
         this.getServletContext().getRequestDispatcher("/results.jsp").forward(request, response);
-
-        for (final Voyage v : mySearchResults)
-        {
-            System.out.print(v.getIdVoyage() + "trip departure " + v.getDepartureVoyage()+"arrival "+v.getArrivalVoyage() +"date" + v.getDepartureDate());
-        }
-
-
-
 
     }
 
