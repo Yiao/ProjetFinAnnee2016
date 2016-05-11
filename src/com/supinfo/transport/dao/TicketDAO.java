@@ -57,11 +57,13 @@ public class TicketDAO implements GenericDAO {
         return resultList;
     }
     @Override
-    public void delete(Long idReservation) {
+    public void delete( Long idReservation) {
         EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
         EntityTransaction transaction = em.getTransaction();
+
         Query query = em.createQuery("delete Ticket  where id= :reservationID ");
         query.setParameter("reservationID", idReservation);
+        //query.setParameter("idUser",idUser);
         saveUpdateChange(em, query, transaction);
     }
 

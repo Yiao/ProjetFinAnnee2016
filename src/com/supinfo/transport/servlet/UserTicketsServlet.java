@@ -36,6 +36,8 @@ public class UserTicketsServlet extends HttpServlet {
         myUser = userDAO.search(account);
         List myReservations =reservationDAO.getMyReservations(myUser.getId());
         request.setAttribute("myReservationPanel",myReservations);
-        this.getServletContext().getRequestDispatcher("/auth/userProfileServlet").forward(request, response);
+
+        //rajouter servlet si besoin
+        this.getServletContext().getRequestDispatcher("/myTravels.jsp").forward(request, response);
     }
 }

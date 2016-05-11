@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by Khalil on 05/05/2016.
  */
-@WebServlet(name = "SearchServlet" ,urlPatterns = "/auth/search")
+@WebServlet(name = "SearchServlet" ,urlPatterns = "/search")
 public class SearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         VoyageDAO myVoyageDAO = new VoyageDAO();
