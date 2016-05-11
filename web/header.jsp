@@ -64,59 +64,6 @@
     </div>
     <!-- END: PRELOADER -->
 
-
-    <!-- BEGIN: SITE-WRAPPER -->
-    <%--<div class="row header-top">--%>
-        <%--<div class="container clear-padding">--%>
-            <%--<div class="navbar-contact">--%>
-                <%--<div class="col-md-7 col-sm-6 clear-padding" style="float : left;">--%>
-                    <%--<a href="#" class="transition-effect"><i class="fa fa-phone"></i> (+33) 1234567890</a>--%>
-                    <%--<a href="#" class="transition-effect"><i class="fa fa-envelope-o"></i> Yiao.SUN@supinfo.com</a>--%>
-                <%--</div>--%>
-                <%--<div class="col-md-5 col-sm-6 clear-padding search-box">--%>
-
-                    <%--&lt;%&ndash;Todo login&ndash;%&gt;--%>
-                    <%--<div class="col-md-6 col-xs-7 clear-padding user-logged">--%>
-                        <%--&lt;%&ndash;%>
-
-
-                            <%--if (request instanceof HttpServletRequest)--%>
-                            <%--{--%>
-                                <%--String username = "";--%>
-                                <%--HttpServletRequest httpRequest = (HttpServletRequest) request;--%>
-                                <%--HttpSession sessionIn =  httpRequest.getSession();--%>
-                                <%--username = (String) sessionIn.getAttribute("username");--%>
-                                <%--if (username!=""&&username!=null)--%>
-                                <%--{--%>
-                                    <%--out.println(--%>
-                                            <%--"<a href=\"/auth/userProfileServlet\" class=\"transition-effect\"> Hi " + username + "</a>");--%>
-                                <%--}--%>
-                                <%--else--%>
-                                <%--{--%>
-                                    <%--out.println(--%>
-                                            <%--"<a href=\"/login\" class=\"transition-effect\">" + "Login" + "</a>"--%>
-                                    <%--);--%>
-                                <%--}--%>
-                            <%--}--%>
-                        <%--%>--%>
-
-                        <%--&lt;%&ndash;<a href="/login" class="transition-effect">&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;&lt;%&ndash;<img src="assets/images/user.jpg" alt="cruise">&ndash;%&gt;&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;Login&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;</a>  &ndash;%&gt;--%>
-
-                        <%--&lt;%&ndash;<a href="#" class="transition-effect">&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;<img src="assets/images/user.jpg" alt="cruise">&ndash;%&gt;--%>
-                            <%--&lt;%&ndash;Hi, Lenore&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;</a>&ndash;%&gt;--%>
-                        <%--<a href="/logout" class="transition-effect">--%>
-                            <%--<i class="fa fa-sign-out"></i>Sign Out--%>
-                        <%--</a>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-    <%--</div>--%>
     <div class="clearfix"></div>
     <div class="row light-menu">
         <div class="container clear-padding">
@@ -161,7 +108,7 @@
                                     <div class="clearfix"></div>
                                 </li>
                                 <li class="dropdown mega">
-                                    <a class="dropdown-toggle" href="#"><i class="fa fa-ship"></i> CRUISE </a>
+                                    <a class="dropdown-toggle" href="/auth/userProfile"><i class="fa fa-pencil"></i> Profile </a>
                                     <div class="clearfix"></div>
                                 </li>
 

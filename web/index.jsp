@@ -28,7 +28,7 @@
                         <div class="tab-content">
                             <!-- BEGIN: FLIGHT SEARCH -->
                             <div role="tabpanel" class="tab-pane active" id="flight">
-                                <form method="post" action="/search">
+                                <form method="post" action="/auth/search">
                                     <div class="col-md-12 product-search-title">Book Flight Tickets</div>
                                     <div class="col-md-12 search-col-padding">
                                         <label class="radio-inline">
