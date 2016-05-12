@@ -38,9 +38,9 @@
                                 out.print("<div class=\"col-sm-12\" >" +
                                         " <div class=\"box-block\">"+" <div class=\"media\">"+"<a class=\"media-object pull-left\" href=\"#\"><img class=\"responsive-image\" src=\"/images/content/featured-tour-1.png\" alt=\"\"/></a>"
                                         +" <div class=\"media-action pull-right\">"+"<span class=\"pr" +
-                                        "ice\"><small>Per Seat</small> $"+reservation.getPrice()+"<br/><a href=\"/auth/DeleteReservation?thisReservation=" + reservation.getId()+ "\" class=\"button mini\">Del</a>"+
-                                        "</div>"+"<p>Departure: "+ reservation.getVoyage().getDepartureVoyage() +"</p>"+"<div class=\"media-body\" >"+
-                                        "<div class=\"media-body\" >"+"<form action=\"SearchTrip\" method=\"post\">"+" <h3 class=\"media-heading\">destination :"+reservation.getVoyage().getArrivalVoyage()+"</h3>"+
+                                        "ice\"><small>Per Seat</small> $"+reservation.getPrice()+"<br/><a href=\"/auth/DeleteReservation?thisReservation=" + reservation.getId()+ "\" class=\"button mini\">Del</a>"+"<br/><a href=\"/auth/ConfirmTicketServlet?thisReservation=" + reservation.getId()+ "\" class=\"button mini\">confirme</a>"+
+                                        "</div>"+"<p>Departure: "+ reservation.getVoyage().getDepartureVoyage().getStationName() +"</p>"+"<div class=\"media-body\" >"+
+                                        "<div class=\"media-body\" >"+"<form action=\"SearchTrip\" method=\"post\">"+" <h3 class=\"media-heading\">destination :"+reservation.getVoyage().getArrivalVoyage().getStationName()+"</h3>"+
                                         "*Transport :"+reservation.getVoyage().getTrain() + "</p>"+" </div>"+" </div>"+" </div>"+" </div>"+" </div>");
                             }
 

@@ -25,7 +25,7 @@ public class TicketDAO implements GenericDAO {
     public Users search(String usernameSelected) {
         EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
         Query query = em.createQuery("SELECT user From Users AS user where user.username= :userSelected");
-        query.setParameter("userSelected",usernameSelected);
+        query.setParameter("userSelected", usernameSelected);
         return (Users) query.getSingleResult();
     }
 
@@ -34,7 +34,8 @@ public class TicketDAO implements GenericDAO {
         return null;
     }
 
-    @Override//valider reservation
+    @Override
+    //valider reservation
     public void update(long id)
     {
          EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
@@ -67,4 +68,12 @@ public class TicketDAO implements GenericDAO {
         saveUpdateChange(em, query, transaction);
     }
 
+    public Ticket searchTicket(long idTicket) {
+        EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
+        Query query = em.createQuery("SELECT ticket From Ticket AS ticket where ticket.id= :myTicket");
+        query.setParameter("myTicket", idTicket);
+        return (Ticket) query.getSingleResult();
+
+
+    }
 }
