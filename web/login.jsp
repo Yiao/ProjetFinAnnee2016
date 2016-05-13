@@ -80,6 +80,31 @@
                     <input name="newusername" type="email" class="form-control" placeholder="Username/Email" required>
                     <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
                 </div>
+
+                <label class="view-login-text">First Name</label>
+                <div class="input-group">
+                    <input name="userFirstName" type="text" class="form-control" placeholder="First Name">
+                    <span class="input-group-addon"><i class="fa fa-eye fa-fw"></i></span>
+                </div>
+
+                <label class="view-login-text">Last Name</label>
+                <div class="input-group">
+                    <input name="userLastName" type="text" class="form-control" placeholder="Last Name">
+                    <span class="input-group-addon"><i class="fa fa-eye fa-fw"></i></span>
+                </div>
+
+                <label class="view-login-text">Age</label>
+                <div class="input-group">
+                    <input name="userAge" type="number" class="form-control" placeholder="Age">
+                    <span class="input-group-addon"><i class="fa fa-eye fa-fw"></i></span>
+                </div>
+
+                <label class="view-login-text">Email</label>
+                <div class="input-group">
+                    <input name="userEmail" type="email" class="form-control" placeholder="Email">
+                    <span class="input-group-addon"><i class="fa fa-eye fa-fw"></i></span>
+                </div>
+
                 <label class="view-login-text">Password</label>
                 <div class="input-group">
                     <input name="newpassword" type="password" class="form-control" placeholder="Password" required>
