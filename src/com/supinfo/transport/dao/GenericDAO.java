@@ -11,7 +11,7 @@ import java.util.List;
  * Created by sya on 3/6/2016.
  */
 public interface GenericDAO {
-    Users search(String usernameSelected);
+    Object search(long usernameSelected);
     default void  create(Object o)
     {
         EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
@@ -29,7 +29,6 @@ public interface GenericDAO {
         }
     }
     List read();
-    void update(long id);
     void delete(Long id);
 
     default void saveUpdateChange(EntityManager em , Query query, EntityTransaction entityTransaction)

@@ -4917,7 +4917,6 @@ h5 {
 }
 .user-profile-tabs .nav-tabs > li {
 	float: none !important;
-	border-bottom: 2px solid #0A3152;
 	
 }
 .user-profile-tabs .nav-tabs > li a:hover {
@@ -4925,7 +4924,7 @@ h5 {
 	background: #F2676B;
 }
 .user-profile-tabs .nav-tabs > li > a {
-    background: #07253F;
+	background: #F2676B;
     border-radius: 0;
     color: #fff;
     font-weight: bold;
@@ -4937,7 +4936,7 @@ h5 {
 .user-profile .user-name h3 {
 	margin: 0 0 15px;
 }
-.user-profile-tabs .nav-tabs > li.active > a,
+.user-profile-tabs .nav-tabs > li.active > a
 .user-profile-tabs .nav-tabs > li.active > a:focus {
 	background: #F2676B;
 	color: #fff;

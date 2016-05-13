@@ -39,14 +39,14 @@
                                         </label>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 search-col-padding">
                                         <label>Leaving From</label>
                                         <div class="input-group">
                                             <input type="text" id="departure_city" name="departure_city" class="form-control" required placeholder="E.g. London">
                                             <span class="input-group-addon"><i class="fa fa-map-marker fa-fw"></i></span>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
+                                    <div class="col-lg-6  col-md-12 col-sm-12 search-col-padding">
                                         <label>Leaving To</label>
                                         <div class="input-group">
                                             <input type="text" id="destination_city" name="destination_city" class="form-control" required placeholder="E.g. New York">
@@ -54,14 +54,14 @@
                                         </div>
                                     </div>
                                     <div class="clearfix"></div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 search-col-padding">
                                         <label>Departure</label>
                                         <div class="input-group">
                                             <input type="text" id="departure_date" name="departure_date" class="form-control" placeholder="DD/MM/YYYY">
                                             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-sm-6 search-col-padding">
+                                    <div class="col-lg-6 col-md-12 col-sm-12 search-col-padding">
                                         <label>Return</label>
                                         <div class="input-group">
                                             <input type="text" id="return_date" class="form-control" name="return_date" placeholder="DD/MM/YYYY">
