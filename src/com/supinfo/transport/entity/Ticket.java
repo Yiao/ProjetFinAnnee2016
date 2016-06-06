@@ -1,5 +1,7 @@
 package com.supinfo.transport.entity;
 
+import com.google.gson.annotations.Expose;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -17,8 +19,18 @@ public class Ticket implements Serializable {
     @GeneratedValue (strategy = GenerationType.AUTO)
     private Long id = null;
     private  String ticketClass;
-    private float price;
-    boolean status ;
+    //private float price;
+    private boolean oneWay;
+   /* private enum adult{
+        private boolean Valid,
+        int number;
+        //same for child ?
+    }*/
+    //valide ?
+   private boolean isadult;
+    private boolean status ;
+    private float finalPrice;
+
 //1 user * tckets
     @ManyToOne
     private Users users;
@@ -39,13 +51,7 @@ public class Ticket implements Serializable {
     }
 
 
-    public float getPrice() {
-        return price;
-    }
 
-    public void setPrice(float price) {
-        this.price = price;
-    }
 
     public Users getUsers() {
         return users;

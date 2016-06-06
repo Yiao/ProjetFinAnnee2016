@@ -1,5 +1,7 @@
 package com.supinfo.transport.entity;
 
+import com.google.gson.annotations.Expose;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.security.PrivateKey;
@@ -24,10 +26,13 @@ public class Users implements Serializable {
 
 
     private String firstName;
+
     private String lastName;
 
     //1 client * reservation
+
     @OneToMany(mappedBy = "users")
+
     private List<Ticket> userTicket;
     
 

@@ -2,8 +2,10 @@ package com.supinfo.transport.dao;
 
 import com.supinfo.transport.entity.Users;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.List;
 import java.util.Objects;
@@ -11,10 +13,16 @@ import java.util.Objects;
 /**
  * Created by sya on 3/6/2016.
  */
+@Stateless
 public class UsersDAO implements GenericDAO {
+    @PersistenceContext
+
+    EntityManager em;
+
 
     public Users search(String usernameSelected) {
-        EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
+        em = PersistenceManager.getEntityManagerFactory().createEntityManager();
+
         Query query = em.createQuery("SELECT user From Users AS user where user.username= :userSelected");
         query.setParameter("userSelected",usernameSelected);
         return (Users) query.getSingleResult();
@@ -26,38 +34,27 @@ public class UsersDAO implements GenericDAO {
     }
 
     @Override
-    public List read() {
-        return null;
+    public List<Users>read() {
+        em = PersistenceManager.getEntityManagerFactory().createEntityManager();
+        Query query = em.createQuery("SELECT user FROM Users AS user ");
+        return query.getResultList();
     }
 
 
 
 
     public void update(String username ,String newfirstname,String newlastname,int newage,String newemail,String newpassword) {
-        EntityManager em = PersistenceManager.getEntityManagerFactory().createEntityManager();
+         em = PersistenceManager.getEntityManagerFactory().createEntityManager();
         EntityTransaction t = em.getTransaction();
-
-
         Users oldUser = new Users();
         oldUser = search(username);
         long idUser = oldUser.getId();
 
-
-
         newfirstname = GetTestFirstName(newfirstname,oldUser);
-
-
-
         newlastname = GetTestLastName(newlastname,oldUser);
-
-
         newemail = GetTestEmail(newemail,oldUser);
-
-
         newpassword = GetTestPassword(newpassword,oldUser);
-
         newage   = GetTestage(newage,oldUser);
-
 
         Query query = em.createQuery("UPDATE Users u  SET firstName = :userfirstname , lastName = :userlastname,age = :userage,u.Email = :usermail, password = :userpassword where u.id = :myIdUser");
 

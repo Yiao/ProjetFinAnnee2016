@@ -88,7 +88,63 @@
                                     <div class="col-md-12 search-col-padding">
                                         <button type="submit" class="search-button btn transition-effect">Search Trains</button>
                                     </div>
+                                    <div class="col-md-4 col-sm-4 search-col-padding">
                                     <div class="clearfix"></div>
+                                        <SELECT class="selectpicker" name="tripHourfrom" size="1">
+                                            <OPTION selected>Select hour</OPTION>
+                                            <OPTION>0
+                                            <OPTION>1
+                                            <OPTION>2
+                                            <OPTION>3
+                                            <OPTION>4
+                                            <OPTION>5
+                                            <OPTION>6
+                                            <OPTION>7
+                                            <OPTION>8
+                                            <OPTION>9
+                                            <OPTION>10
+                                            <OPTION>11
+                                            <OPTION>12
+                                            <OPTION>13
+                                            <OPTION>14
+                                            <OPTION>15
+                                            <OPTION>16
+                                            <OPTION>17
+                                            <OPTION>18
+                                            <OPTION>19
+                                            <OPTION>20
+                                            <OPTION>21
+                                            <OPTION>22
+                                            <OPTION>23
+                                        </SELECT>
+                                    <SELECT class="selectpicker" name="tripHourto" size="1">
+                                        <OPTION selected>Select hour</OPTION>
+                                        <OPTION>0
+                                        <OPTION>1
+                                        <OPTION>2
+                                        <OPTION>3
+                                        <OPTION>4
+                                        <OPTION>5
+                                        <OPTION>6
+                                        <OPTION>7
+                                        <OPTION>8
+                                        <OPTION>9
+                                        <OPTION>10
+                                        <OPTION>11
+                                        <OPTION>12
+                                        <OPTION>13
+                                        <OPTION>14
+                                        <OPTION>15
+                                        <OPTION>16
+                                        <OPTION>17
+                                        <OPTION>18
+                                        <OPTION>19
+                                        <OPTION>20
+                                        <OPTION>21
+                                        <OPTION>22
+                                        <OPTION>23
+                                    </SELECT>
+                                        </div>
                                 </form>
                             </div>
                             <!-- END: FLIGHT SEARCH -->

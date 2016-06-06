@@ -27,8 +27,8 @@ public class Voyage  implements Serializable {
     @OneToMany(mappedBy = "voyage")
     private List<Ticket> userTickets;
     //* voyage 1 escale.stationEscaale
-    @ManyToOne
-    private  Escale voyage;
+    @OneToMany (mappedBy = "voyage")
+    private List<Escale>escales;
     //1 voyage * station depart
     @ManyToOne
     private Station departureVoyage;
@@ -37,6 +37,7 @@ public class Voyage  implements Serializable {
     //* voyage 1 train
     @ManyToOne
     private  Train train;
+
 
     public Long getIdVoyage() {
         return idVoyage;
@@ -70,12 +71,12 @@ public class Voyage  implements Serializable {
         this.userTickets = userTickets;
     }
 
-    public Escale getVoyage() {
-        return voyage;
+    public List<Escale> getEscales() {
+        return escales;
     }
 
-    public void setVoyage(Escale voyage) {
-        this.voyage = voyage;
+    public void setEscales(List<Escale> escales) {
+        this.escales = escales;
     }
 
     public Station getDepartureVoyage() {

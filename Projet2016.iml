@@ -32,5 +32,9 @@
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 8.0.32" level="application_server_libraries" />
     <orderEntry type="library" name="jstl-1.2" level="project" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="gson-2.6.2" level="project" />
+    <orderEntry type="library" name="javaee:javaee-api:5" level="project" />
+    <orderEntry type="library" name="javax.ws.rs" level="project" />
+    <orderEntry type="library" name="org.glassfish.jersey:jax-rs-ri:2.0-rc1" level="project" />
   </component>
 </module>
